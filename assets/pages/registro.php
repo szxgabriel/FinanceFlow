@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class = "caixa">
+    <div class = "caixa">  
         <form>
         <h2>Registrar-se</h2>
         
@@ -27,10 +27,11 @@
         </div>
 
         <div class="campo">
-            <input type="password" name = "confirmsenha" id="confirmsenha" placeholder=" " required>
-            <label for="confirmsenha">Confirmar senha</label>
-            </div>
-        <button type="submit" class="entrarbtn" onclick="window.location.href='/pg1/pg1.html'">Registrar</button>
+        <input type="password" name = "confirmsenha" id="confirmsenha" placeholder=" " required>
+        <label for="confirmsenha">Confirmar senha</label>
+        </div>
+
+        <button type="submit" class="entrarbtn" onclick="window.location.href='/pg1.php'">Registrar</button>
         
       </form>
       </div>

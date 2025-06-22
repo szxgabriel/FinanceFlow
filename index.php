@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>FinanceFlow</title>
-  <link rel="stylesheet" href="/assets/css/pgprincipal.css">
+  <link rel="stylesheet" href="/css/pgprincipal.css">
 </head>
 <body> 
   <header>
     <div class="logo">FinanceFlow</div>
-    <button class="login-btn" onclick = "window.location.href='/login/login.html'">Login</button>
+    <button class="login-btn" onclick = "window.location.href='/pages/login.php'">Login</button>
   </header>
 
   <section class="hero">
     <h1>Gerencie suas finanças com confiança</h1>
-    <button class="cta-btn" onclick="window.location.href='/registro/registro.html'">Comece agora</button>
+    <button class="cta-btn" onclick="window.location.href='/pages/registro.php'">Comece agora</button>
   </section>
 
   <main>
