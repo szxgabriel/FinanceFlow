@@ -11,12 +11,12 @@
 <body> 
   <header>
     <div class="logo">FinanceFlow</div>
-    <button class="login-btn" onclick = "window.location.href='/pages/login.php'">Login</button>
+    <button class="login-btn" onclick = "window.location.href='assets/pages/login.php'">Login</button>
   </header>
 
   <section class="hero">
     <h1>Gerencie suas finanças com confiança</h1>
-    <button class="cta-btn" onclick="window.location.href='/pages/registro.php'">Comece agora</button>
+    <button class="cta-btn" onclick="window.location.href='assets/pages/registro.php'">Comece agora</button>
   </section>
 
   <main>
