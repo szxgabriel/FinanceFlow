@@ -1,3 +1,42 @@
+<?php
+require_once 'back/conexao.php';
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$confirmar_senha = $_POST['confirmar_senha'];
+
+if ($senha != $confirmar_senha)
+{
+    echo "As senhas não coincidem";
+    exit;
+}
+
+$sqlverifica = "SELECT id FROM usuarios WHERE email = :email";
+$stmtverifica = $pdo->prepare($sqlverifica);
+$stmtverifica->execute([':email' => $email]);
+if($stmtverifica->rowCount() > 0)
+{
+    echo "Esse E-mail já foi cadastrado";
+    exit;
+}
+$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+$sql = "INSERT INTO usuarios(nome, email, senha) VALUES(:nome, :email, :senha)";
+$stmt = $pdo->prepare($sql);
+try
+{
+    $stmt->execute([
+        ' :nome' => $nome,
+        ' :email' => $email,
+        ' :senha' => $senhaHash
+    ]);
+    echo "Usuário cadastrado com sucesso";
+}
+catch(PDOException $e)
+{
+    echo "Erro ao cadastrar: ". $e->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ptb">
 <head>
@@ -8,7 +47,7 @@
 </head>
 <body>
     <div class = "caixa">  
-        <form>
+        <form action="registro.php" method="POST">
         <h2>Registrar-se</h2>
         
         <div class="campo">
