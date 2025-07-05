@@ -1,5 +1,5 @@
 <?php
-require_once 'back/conexao.php';
+require_once '../back/conexao.php';
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
