@@ -13,7 +13,7 @@
     <div class = "caixa">
       <form>
       <h2>Login</h2>
-      
+
       <div class="campo">
       <input type="text" name = "email" id = "email" placeholder=" " required>
       <label for="email"> E-mail </label>
@@ -25,7 +25,6 @@
       </div>
 
       <button type="submit" class="entrarbtn" onclick="window.location.href='/pg1/pg1.html'">Login</button>
-      
     </form>
     </div>
 </body>

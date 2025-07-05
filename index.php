@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>FinanceFlow</title>
-  <link rel="stylesheet" href="/css/pgprincipal.css">
+  <link rel="stylesheet" href="/assets/css/pgprincipal.css">
 </head>
 <body> 
   <header>
@@ -19,7 +19,10 @@
   <main>
     <section class="info">
       <h2>Dicas para você economizar mais</h2>
-      <p>Dicas que te ajudarão a guardar seu dinheiro...</p>
+      <p>Dicas que te ajudarão a guardar seu dinheiro...
+        <br>
+      abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrsuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqasas
+      </p>
     </section>
     <section class="info">
       <h2>Dicas de investimentos</h2>
