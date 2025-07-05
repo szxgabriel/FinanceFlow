@@ -1,13 +1,14 @@
 <?php
-$host = "db.phrxdvwojlqwrhskwhzd.supabase.co";
+$host = "ep-icy-water-acagigex-pooler.sa-east-1.aws.neon.tech";
 $port = "5432";
-$dbname = "postgres";
-$user = "postgres";
-$password = "FECIP2025";
+$dbname = "FinanceFlow";
+$user = "Felipe";
+$password = "npg_i9AybMq4EZIr";
+$sslmode = "require";
 
 try
 {
-    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;sslmode=$sslmode", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 
