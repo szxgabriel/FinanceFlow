@@ -1,9 +1,19 @@
 <?php
 require_once '../../back/conexao.php';
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$confirmar_senha = $_POST['confirmar_senha'];
+
+if($_SERVER["REQUEST_METHOD"] === "POST")
+{
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $confirmar_senha = $_POST['confirmar_senha'];
+
+    if(empty($nome) || empty($email) || empty($senha) || empty($confirmar_senha))
+    {
+        echo "Por favor, preencha todos os campos!";
+    }
+
+}
 
 if ($senha != $confirmar_senha)
 {
@@ -25,9 +35,9 @@ $stmt = $pdo->prepare($sql);
 try
 {
     $stmt->execute([
-        ' :nome' => $nome,
-        ' :email' => $email,
-        ' :senha' => $senhaHash
+        ':nome' => $nome,
+        ':email' => $email,
+        ':senha' => $senhaHash
     ]);
     echo "Usuário cadastrado com sucesso";
 }
